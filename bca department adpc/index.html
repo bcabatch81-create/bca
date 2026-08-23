@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADP College BCA Department | Dynamic Hub & Batch Highlights</title>
+    <meta
+      name="description"
+      content="BCA Department website for ADP College featuring batch highlights video, dynamic statistics, faculty contacts, WhatsApp links, and student gallery."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome for high-quality icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Live Announcement Ticker -->
+    <div class="ticker-wrap" aria-label="Department Announcements">
+      <div class="ticker-label">
+        <span class="pulse-dot"></span> LIVE UPDATES
+      </div>
+      <div class="ticker-track">
+        <div class="ticker-content">
+          <span>🎓 Welcome to ADP College BCA Department</span>
+          <span>⚡ 100% Attendance Milestone Achieved</span>
+          <span>🚀 200% Increase in Project Enthusiasm</span>
+          <span>🎉 Batch of 2023-2026 Highlights Video Released!</span>
+          <span>💼 Annual Tech Placements & Campus Drives Underway</span>
+          <span>🌟 Admissions & Guidance Open for BCA</span>
+        </div>
+        <!-- Duplicated for seamless continuous loop -->
+        <div class="ticker-content" aria-hidden="true">
+          <span>🎓 Welcome to ADP College BCA Department</span>
+          <span>⚡ 100% Attendance Milestone Achieved</span>
+          <span>🚀 200% Increase in Project Enthusiasm</span>
+          <span>🎉 Batch of 2023-2026 Highlights Video Released!</span>
+          <span>💼 Annual Tech Placements & Campus Drives Underway</span>
+          <span>🌟 Admissions & Guidance Open for BCA</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="topbar">
+      <div class="container nav">
+        <a href="#" class="brand" aria-label="ADP College BCA Home">
+          <span class="brand-mark">ADP</span>
+          <div class="brand-info">
+            <p class="brand-name">BCA Department</p>
+            <small>ADP College, Nagaon</small>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#about"><i class="fa-solid fa-info-circle"></i> About</a>
+          <a href="#video-highlights" class="nav-highlight"><i class="fa-solid fa-play-circle"></i> Highlights Video</a>
+          <a href="#teachers"><i class="fa-solid fa-chalkboard-user"></i> Faculty</a>
+          <a href="#gallery"><i class="fa-solid fa-images"></i> Gallery</a>
+          <a href="#contact" class="nav-cta"><i class="fa-brands fa-whatsapp"></i> Chat With Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section with Dynamic Showcase and Video Teaser -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="badge-row">
+              <span class="status-badge live-badge">
+                <span class="pulse-indicator"></span> Active Department
+              </span>
+              <span class="status-badge year-badge">Batch 2023–2026</span>
+            </div>
+            <h1>Innovate, Create & Lead in Tech at ADP BCA</h1>
+            <p>
+              Empowering future software engineers and tech innovators with hands-on coding, practical project mentorship, and a vibrant community.
+            </p>
+            <div class="cta-row">
+              <a href="#video-highlights" class="primary-btn pulse-button">
+                <i class="fa-solid fa-circle-play"></i> Watch Batch Video
+              </a>
+              <a href="#teachers" class="secondary-btn">
+                <i class="fa-solid fa-user-tie"></i> Contact Faculty
+              </a>
+              <a href="#gallery" class="ghost-btn">
+                <i class="fa-regular fa-image"></i> Batch Photos
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Video Card Preview -->
+          <div class="hero-video-card">
+            <div class="video-preview-wrapper">
+              <div class="video-ambient-glow"></div>
+              <video
+                id="heroVideo"
+                class="hero-video-player"
+                src="assets/videos/bca_intro.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+              ></video>
+              <div class="video-preview-overlay">
+                <div class="live-tag">
+                  <span class="red-dot"></span> CONTINUOUS REEL
+                </div>
+                <button
+                  class="preview-sound-toggle"
+                  id="heroSoundToggle"
+                  title="Toggle Sound"
+                  aria-label="Toggle Sound"
+                >
+                  <i class="fa-solid fa-volume-xmark"></i>
+                </button>
+                <div class="preview-caption">
+                  <h4>BCA Batch Highlights</h4>
+                  <p>Memories, Milestones & Energy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dynamic Statistics Counter Section -->
+      <section class="stats-section">
+        <div class="container stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="stat-number" data-target="100" data-suffix="%">0%</div>
+            <p class="stat-label">Attendance Rate Achieved</p>
+          </div>
+          <div class="stat-card highlight-card">
+            <div class="stat-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div class="stat-number" data-target="200" data-suffix="%">0%</div>
+            <p class="stat-label">Enthusiasm & Activity Boost</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="stat-number" data-target="3" data-suffix=" Years">0</div>
+            <p class="stat-label">BCA Degree Curriculum</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-camera-retro"></i></div>
+            <div class="stat-number" data-target="50" data-suffix="+">0</div>
+            <p class="stat-label">Unforgettable Campus Memories</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dedicated Video Highlights Showcase Section -->
+      <section id="video-highlights" class="video-section section-spacing">
+        <div class="container">
+          <div class="section-heading text-center">
+            <p class="eyebrow"><i class="fa-solid fa-film"></i> Official Highlights Video</p>
+            <h2>Department Life, Events & Celebrations</h2>
+            <p class="section-subtext">
+              Experience the energy, friendship, and accomplishments of the BCA Batch. Video plays automatically and loops seamlessly!
+            </p>
+          </div>
+
+          <div class="video-showcase-container">
+            <div class="video-player-box">
+              <video
+                id="mainVideo"
+                class="main-video"
+                src="assets/videos/bca_intro.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+              ></video>
+
+              <!-- Big Center Play/Pause Indicator on Click -->
+              <div class="play-state-indicator" id="playStateIndicator">
+                <i class="fa-solid fa-play"></i>
+              </div>
+
+              <!-- Custom Video Control Bar -->
+              <div class="custom-video-controls">
+                <div class="video-progress-container" id="progressContainer">
+                  <div class="video-progress-bar" id="progressBar"></div>
+                </div>
+                <div class="controls-row">
+                  <div class="controls-left">
+                    <button class="control-btn" id="playPauseBtn" title="Play / Pause" aria-label="Play / Pause">
+                      <i class="fa-solid fa-pause"></i>
+                    </button>
+                    <button class="control-btn" id="restartBtn" title="Restart Video" aria-label="Restart Video">
+                      <i class="fa-solid fa-arrow-rotate-left"></i>
+                    </button>
+                    <button class="control-btn" id="muteToggleBtn" title="Mute / Unmute" aria-label="Mute / Unmute">
+                      <i class="fa-solid fa-volume-xmark"></i>
+                    </button>
+                    <span class="time-display" id="timeDisplay">0:00 / 0:34</span>
+                  </div>
+
+                  <div class="controls-right">
+                    <span class="loop-badge"><i class="fa-solid fa-repeat"></i> Auto-Loop Active</span>
+                    <button class="control-btn" id="fullscreenBtn" title="Fullscreen" aria-label="Toggle Fullscreen">
+                      <i class="fa-solid fa-expand"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video Timeline & Interactive Jump Markers -->
+            <div class="video-markers-card">
+              <h3><i class="fa-solid fa-clapperboard"></i> Jump to Moments in Video</h3>
+              <div class="marker-chips">
+                <button class="marker-chip active" data-time="0">
+                  <i class="fa-solid fa-play"></i>
+                  <span>0:00 - Intro & Milestone</span>
+                </button>
+                <button class="marker-chip" data-time="6">
+                  <i class="fa-solid fa-chart-pie"></i>
+                  <span>0:06 - 100% Attendance</span>
+                </button>
+                <button class="marker-chip" data-time="10">
+                  <i class="fa-solid fa-chart-line"></i>
+                  <span>0:10 - 200% Enthusiasm</span>
+                </button>
+                <button class="marker-chip" data-time="16">
+                  <i class="fa-solid fa-cake-candles"></i>
+                  <span>0:16 - Cultural Celebrations</span>
+                </button>
+                <button class="marker-chip" data-time="22">
+                  <i class="fa-solid fa-hands-clapping"></i>
+                  <span>0:22 - Team Spirit & Friendship</span>
+                </button>
+                <button class="marker-chip" data-time="28">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>0:28 - Congratulations Batch!</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about section-spacing">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-text-column">
+              <div class="section-heading">
+                <p class="eyebrow"><i class="fa-solid fa-compass"></i> About The Department</p>
+                <h2>Shaping Bright Minds in Computer Applications</h2>
+              </div>
+              <div class="about-box">
+                <p>
+                  The BCA Department at Anandaram Dhekial Phookan (ADP) College is committed to building robust foundations in software engineering, full-stack programming, artificial intelligence fundamentals, database management, and digital problem solving.
+                </p>
+                <p>
+                  Our curriculum combines rigorous academic learning with hands-on lab experiments, collaborative team hackathons, and real-world industrial exposure so every student thrives with high technical competence and confidence.
+                </p>
+                <div class="about-features">
+                  <div class="feature-pill"><i class="fa-solid fa-check"></i> Modern Computing Lab</div>
+                  <div class="feature-pill"><i class="fa-solid fa-check"></i> Industry-Oriented Curriculum</div>
+                  <div class="feature-pill"><i class="fa-solid fa-check"></i> Dedicated Teacher Mentorship</div>
+                  <div class="feature-pill"><i class="fa-solid fa-check"></i> Cultural & Tech Activities</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-card-column">
+              <div class="info-card-gradient">
+                <div class="info-card-header">
+                  <span class="info-tag">Program Highlights</span>
+                  <h3>Bachelor of Computer Applications</h3>
+                </div>
+                <ul class="info-list">
+                  <li><i class="fa-solid fa-calendar-check"></i> Duration: 3 Years Full-Time (6 Semesters)</li>
+                  <li><i class="fa-solid fa-laptop-code"></i> Core Focus: C, C++, Java, Web Dev, Python, DBMS</li>
+                  <li><i class="fa-solid fa-building-columns"></i> Affiliation: Gauhati University</li>
+                  <li><i class="fa-solid fa-location-dot"></i> Campus: ADP College, Nagaon, Assam</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Faculty / Teachers Section -->
+      <section id="teachers" class="teachers section-spacing">
+        <div class="container">
+          <div class="section-heading text-center">
+            <p class="eyebrow"><i class="fa-solid fa-user-graduate"></i> Academic Leadership</p>
+            <h2>Meet Our Esteemed Faculty</h2>
+            <p class="section-subtext">
+              Direct access for academic counseling, syllabus inquiries, and student project mentorship.
+            </p>
+          </div>
+
+          <div class="teacher-grid">
+            <!-- Faculty 1 -->
+            <article class="teacher-card">
+              <div class="card-top-decoration"></div>
+              <div class="teacher-avatar-wrap">
+                <div class="teacher-avatar">
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <span class="status-dot-online" title="Available for academic support"></span>
+              </div>
+              <h3>Deepjyoti Borah</h3>
+              <p class="teacher-role">Assistant Professor / Faculty</p>
+              <div class="teacher-contact-detail">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span class="teacher-phone">+91 98642 42722</span>
+              </div>
+              <div class="teacher-actions">
+                <a
+                  href="https://wa.me/919864242722?text=Hello%20Deepjyoti%20Sir%2C%20I%20am%20contacting%20regarding%20the%20ADP%20College%20BCA%20Department"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="whatsapp-btn"
+                >
+                  <i class="fa-brands fa-whatsapp"></i> WhatsApp Chat
+                </a>
+                <a href="tel:+919864242722" class="call-btn">
+                  <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+              </div>
+            </article>
+
+            <!-- Faculty 2 -->
+            <article class="teacher-card">
+              <div class="card-top-decoration"></div>
+              <div class="teacher-avatar-wrap">
+                <div class="teacher-avatar alt-avatar">
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <span class="status-dot-online" title="Available for academic support"></span>
+              </div>
+              <h3>Siddartha Saikia</h3>
+              <p class="teacher-role">Assistant Professor / Faculty</p>
+              <div class="teacher-contact-detail">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span class="teacher-phone">+91 91019 54267</span>
+              </div>
+              <div class="teacher-actions">
+                <a
+                  href="https://wa.me/919101954267?text=Hello%20Siddartha%20Sir%2C%20I%20am%20contacting%20regarding%20the%20ADP%20College%20BCA%20Department"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="whatsapp-btn"
+                >
+                  <i class="fa-brands fa-whatsapp"></i> WhatsApp Chat
+                </a>
+                <a href="tel:+919101954267" class="call-btn">
+                  <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Batch Memories & Photo Gallery Section -->
+      <section id="gallery" class="gallery section-spacing">
+        <div class="container">
+          <div class="section-heading text-center">
+            <p class="eyebrow"><i class="fa-solid fa-images"></i> Department Life</p>
+            <h2>2023-2026 Batch Gallery</h2>
+            <p class="section-subtext">
+              Click on any photograph to view high resolution in the interactive lightbox.
+            </p>
+          </div>
+
+          <div class="gallery-grid">
+            <figure class="gallery-item" data-index="0">
+              <div class="caption"><i class="fa-solid fa-star"></i> Batch Orientation & Group</div>
+              <img src="assets/images/batch1.jpeg" alt="BCA batch 2023-2026 photo 1" loading="lazy" />
+              <div class="gallery-hover-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span>View Full Photo</span>
+              </div>
+            </figure>
+
+            <figure class="gallery-item" data-index="1">
+              <div class="caption"><i class="fa-solid fa-users"></i> Classroom Memories</div>
+              <img src="assets/images/batch2.jpeg" alt="BCA batch 2023-2026 photo 2" loading="lazy" />
+              <div class="gallery-hover-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span>View Full Photo</span>
+              </div>
+            </figure>
+
+            <figure class="gallery-item" data-index="2">
+              <div class="caption"><i class="fa-solid fa-cake-candles"></i> Celebrations & Events</div>
+              <img src="assets/images/batch3.jpeg" alt="BCA batch 2023-2026 photo 3" loading="lazy" />
+              <div class="gallery-hover-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span>View Full Photo</span>
+              </div>
+            </figure>
+
+            <figure class="gallery-item" data-index="3">
+              <div class="caption"><i class="fa-solid fa-graduation-cap"></i> Team Spirit</div>
+              <img src="assets/images/batch4.jpeg" alt="BCA batch 2023-2026 photo 4" loading="lazy" />
+              <div class="gallery-hover-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span>View Full Photo</span>
+              </div>
+            </figure>
+
+            <figure class="gallery-item" data-index="4">
+              <div class="caption"><i class="fa-solid fa-mountain-sun"></i> Friendship</div>
+              <img src="assets/images/batch5.jpeg" alt="BCA batch 2023-2026 photo 5" loading="lazy" />
+              <div class="gallery-hover-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span>View Full Photo</span>
+              </div>
+            </figure>
+
+            <figure class="gallery-item" data-index="5">
+              <div class="caption"><i class="fa-solid fa-handshake"></i> Unbreakable Bonds</div>
+              <img src="assets/images/batch6.jpeg" alt="BCA batch 2023-2026 photo 6" loading="lazy" />
+              <div class="gallery-hover-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span>View Full Photo</span>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Contact & Location Card -->
+      <section id="contact" class="contact-section section-spacing">
+        <div class="container">
+          <div class="contact-card">
+            <div class="contact-info">
+              <p class="eyebrow"><i class="fa-solid fa-building-columns"></i> Get In Touch</p>
+              <h2>Have questions about BCA at ADP College?</h2>
+              <p>
+                Reach out to our faculty members directly or visit the BCA department on the college campus.
+              </p>
+              <div class="contact-details-list">
+                <div class="detail-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>ADP College Road, Nagaon, Assam - 782002</span>
+                </div>
+                <div class="detail-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>adpcollege@gmail.com</span>
+                </div>
+              </div>
+            </div>
+            <div class="contact-cta-box">
+              <h3>Connect via WhatsApp</h3>
+              <p>Quick chat with faculty regarding admissions & updates</p>
+              <div class="contact-btn-group">
+                <a
+                  href="https://wa.me/919864242722?text=Hello%20Deepjyoti%20Sir%2C%20I%20have%20an%20inquiry%20about%20ADP%20BCA"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="whatsapp-btn"
+                >
+                  <i class="fa-brands fa-whatsapp"></i> Chat: Deepjyoti Borah
+                </a>
+                <a
+                  href="https://wa.me/919101954267?text=Hello%20Siddartha%20Sir%2C%20I%20have%20an%20inquiry%20about%20ADP%20BCA"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="whatsapp-btn"
+                >
+                  <i class="fa-brands fa-whatsapp"></i> Chat: Siddartha Saikia
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox Modal for Photo Gallery -->
+    <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-hidden="true">
+      <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+      <div class="lightbox-container">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous Image">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="lightbox-image-wrapper">
+          <img id="lightboxImg" src="" alt="Enlarged Batch Photo" />
+          <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next Image">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Floating Quick WhatsApp Button & Back To Top Button -->
+    <div class="floating-actions">
+      <a
+        href="https://wa.me/919864242722?text=Hello%20ADP%20College%20BCA%20Department"
+        target="_blank"
+        rel="noreferrer"
+        class="floating-whatsapp"
+        title="Chat on WhatsApp"
+        aria-label="Chat on WhatsApp"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="floating-tooltip">Chat with Faculty</span>
+      </a>
+      <button class="scroll-top-btn" id="scrollTopBtn" title="Back to top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <strong>ADP College BCA Department</strong>
+          <p>Nagaon, Assam • Empowering tomorrow's developers</p>
+        </div>
+        <p class="footer-copyright">© 2026 ADP College BCA Department. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
